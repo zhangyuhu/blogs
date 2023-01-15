@@ -81,13 +81,13 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   gitRepo = ""
   # LoveIt 新增 | 0.1.1 哪种哈希函数用来 SRI, 为空时表示不使用 SRI
   # ["sha256", "sha384", "sha512", "md5"]
-  fingerprint = ""
+  fingerprint = "sha512"
   # LoveIt 新增 | 0.2.0 日期格式
   dateFormat = "2006-01-02"
   # 网站标题, 用于 Open Graph 和 Twitter Cards
   title = "我的网站"
   # 网站描述, 用于 RSS, SEO, Open Graph 和 Twitter Cards
-  description = "这是我的全新 Hugo 网站"
+  description = "这是[zhangyuhu]的网站"
   # 网站图片, 用于 Open Graph 和 Twitter Cards
   images = ["/logo.png"]
 
@@ -102,31 +102,31 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       # LOGO 的 URL
       logo = ""
       # 标题名称
-      name = ""
+      name = "HOME"
       # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
       pre = ""
       # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
       post = ""
       # LoveIt 新增 | 0.2.5 是否为标题显示打字机动画
-      typeit = false
+      typeit = true
 
   # 页面底部信息配置
   [params.footer]
     enable = true
     # LoveIt 新增 | 0.2.0 自定义内容 (支持 HTML 格式)
-    custom = ''
+    custom = '为天地立心,为生民立命,为往圣继绝学,为万世开太平'
     # LoveIt 新增 | 0.2.0 是否显示 Hugo 和主题信息
-    hugo = true
+    hugo = false
     # LoveIt 新增 | 0.2.0 是否显示版权信息
     copyright = true
     # LoveIt 新增 | 0.2.0 是否显示作者
     author = true
     # 网站创立年份
-    since = 2019
+    since = 2023
     # ICP 备案信息，仅在中国使用 (支持 HTML 格式)
     icp = ""
     # 许可协议信息 (支持 HTML 格式)
-    license = '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
+    license = '<a rel="license external nofollow noopener noreffer" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">知识共享署名 4.0 国际许可协议</a>'
 
   # LoveIt 新增 | 0.2.0 Section (所有文章) 页面配置
   [params.section]
@@ -191,13 +191,13 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     [params.home.profile]
       enable = true
       # Gravatar 邮箱，用于优先在主页显示的头像
-      gravatarEmail = "zhangyuhude@163.com"
+      # gravatarEmail = "zhangyuhude@163.com"
       # 主页显示头像的 URL
       avatarURL = "/images/avatar.png"
       # LoveIt 更改 | 0.2.7 主页显示的网站标题 (支持 HTML 格式)
       title = ""
       # 主页显示的网站副标题 (允许 HTML 格式)
-      subtitle = "这是我的网站"
+      subtitle = "这是[zhangyuhu]的网站"
       # 是否为副标题显示打字机动画
       typeit = true
       # 是否显示社交账号
@@ -215,7 +215,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
 
   # 作者的社交信息设置
   [params.social]
-    GitHub = "https://github.com/zhangyuhu"
+    GitHub = "zhangyuhu"
     # GitHub = ""
     # Twitter = "xxxx"
     # Instagram = "xxxx"
@@ -298,7 +298,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     # LoveIt 新增 | 0.2.0 是否在搜索结果中隐藏一篇文章
     hiddenFromSearch = false
     # LoveIt 新增 | 0.2.0 是否使用 twemoji
-    twemoji = false
+    twemoji = true
     # 是否使用 lightgallery
     lightgallery = false
     # LoveIt 新增 | 0.2.0 是否使用 ruby 扩展语法
@@ -382,7 +382,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       Mix = false
     # LoveIt 更改 | 0.2.0 评论系统设置
     [params.page.comment]
-      enable = false
+      enable = true
       # Disqus 评论系统设置
       [params.page.comment.disqus]
         # LoveIt 新增 | 0.1.1

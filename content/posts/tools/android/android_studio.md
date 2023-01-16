@@ -55,15 +55,15 @@ sudo chmod 777 /opt/android-studio/bin
 
 # 配置
 
-![image-20220729164622788](./images/image-20220729164622788.png)
+![image-20220729164622788](../images/image-20220729164622788.png)
 
 
 
-![image-20220729164645373](./images/image-20220729164645373.png)
+![image-20220729164645373](../images/image-20220729164645373.png)
 
 
 
-![image-20220729164829551](./images/image-20220729164829551.png)
+![image-20220729164829551](../images/image-20220729164829551.png)
 
 
 

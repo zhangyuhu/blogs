@@ -90,6 +90,9 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   description = "这是[zhangyuhu]的网站"
   # 网站图片, 用于 Open Graph 和 Twitter Cards
   images = ["/logo.png"]
+  # busuanzi
+  # busuanzi = true
+  # busuanzi_site_offset = 100000
 
   # 页面头部导航栏配置
   [params.header]
@@ -466,6 +469,27 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         lazyLoading = false
         lightTheme = "light"
         darkTheme = "dark"
+    # huhu 自定义配置 huhuCfg
+    [params.huhuCfg]
+      [params.huhuCfg.summary]
+        update = true # summary 更新日期显示
+      [params.huhuCfg.page]
+        update = true # pages 更新日期显示
+      [params.huhuCfg.busuanzi]
+        enable = true
+        # custom uv for the whole site
+        site_uv = true
+        site_uv_pre = '<i class="fa fa-user"></i>' # 字符或提示语
+        site_uv_post = ''
+        # custom pv for the whole site
+        site_pv = true
+        site_pv_pre = '<i class="fa fa-eye"></i>'
+        # site_pv_post = '<i class="far fa-eye fa-fw"></i>'
+        site_pv_post = ''
+        # custom pv span for one page only
+        page_pv = true
+        page_pv_pre = '<i class="far fa-eye fa-fw"></i>'
+        page_pv_post = ''
     # LoveIt 新增 | 0.2.7 第三方库配置
     [params.page.library]
       [params.page.library.css]

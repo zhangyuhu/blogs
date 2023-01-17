@@ -75,10 +75,12 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     title = ""
 
 [params]
+  # LoveIt 主题版本
+  version = "0.2.X"
   # 网站默认主题样式 ["auto", "light", "dark"]
   defaultTheme = "auto"
   # 公共 git 仓库路径，仅在 enableGitInfo 设为 true 时有效
-  gitRepo = ""
+  gitRepo = "https://github.com/dillonzq/LoveIt"
   # LoveIt 新增 | 0.1.1 哪种哈希函数用来 SRI, 为空时表示不使用 SRI
   # ["sha256", "sha384", "sha512", "md5"]
   fingerprint = "sha512"
@@ -90,6 +92,10 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   description = "这是[zhangyuhu]的网站"
   # 网站图片, 用于 Open Graph 和 Twitter Cards
   images = ["/logo.png"]
+  #来自之前
+  archivePaginate = 50
+  # show 'xx Posts In Total' in archive page ?            # 是否在归档页显示文章的总数
+  showArchiveCount = true
   # busuanzi
   # busuanzi = true
   # busuanzi_site_offset = 100000
@@ -107,11 +113,22 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       # 标题名称
       name = "HOME"
       # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
-      pre = ""
+      pre = "<i class='far fa-kiss-wink-heart fa-fw'></i>"
       # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
       post = ""
       # LoveIt 新增 | 0.2.5 是否为标题显示打字机动画
       typeit = true
+
+  [params.busuanzi]         # count web traffic by busuanzi                             # 是否使用不蒜子统计站点访问量
+    enable = true
+    siteUV = true
+    sitePV = true
+    pagePV = true
+
+  [params.reward]                                         # 文章打赏
+    enable = true
+    wechat = "/path/to/your/wechat-qr-code.png"           # 微信二维码
+    alipay = "/path/to/your/alipay-qr-code.png" 
 
   # 页面底部信息配置
   [params.footer]
@@ -319,7 +336,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       # 是否使用目录
       enable = true
       # LoveIt 新增 | 0.2.9 是否保持使用文章前面的静态目录
-      keepStatic = true
+      keepStatic = false
       # 是否使侧边目录自动折叠展开
       auto = true
     # LoveIt 新增 | 0.2.0 代码配置
@@ -533,10 +550,86 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   # LoveIt 新增 | 0.2.10 网站 SEO 配置
   [params.seo]
     # 图片 URL
-    image = ""
+    image = "/images/Apple-Devices-Preview.png"
     # 缩略图 URL
-    thumbnailUrl = ""
+    thumbnailUrl = "/images/screenshot.png"
 
   # LoveIt 新增 | 0.2.0 网站分析配置
   [params.analytics]
     enable = false
+    # Google Analytics
+    [params.analytics.google]
+      id = ""
+      # whether to anonymize IP
+      # 是否匿名化用户 IP
+      anonymizeIP = true
+    # Fathom Analytics
+    [params.analytics.fathom]
+      id = ""
+      # server url for your tracker if you're self hosting
+      # 自行托管追踪器时的主机路径
+      server = ""
+
+# Markup related configuration in Hugo
+# Hugo 解析文档的配置
+[markup]
+  defaultMarkdownHandler = "goldmark"
+  [markup.asciidocExt]
+    backend = "html5"
+    extensions = []
+    failureLevel = "fatal"
+    noHeaderOrFooter = true
+    safeMode = "unsafe"
+    sectionNumbers = false
+    trace = false
+    verbose = false
+    workingFolderCurrent = false
+    [markup.asciidocExt.attributes]
+  [markup.blackFriday]
+    angledQuotes = false
+    footnoteAnchorPrefix = ""
+    footnoteReturnLinkContents = ""
+    fractions = true
+    hrefTargetBlank = false
+    latexDashes = true
+    nofollowLinks = false
+    noreferrerLinks = false
+    plainIDAnchors = true
+    skipHTML = false
+    smartDashes = true
+    smartypants = true
+    smartypantsQuotesNBSP = false
+    taskLists = true
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+    [markup.goldmark.parser]
+      attribute = true
+      autoHeadingID = true
+      autoHeadingIDType = "github"
+    [markup.goldmark.renderer]
+      hardWraps = false
+      unsafe = false
+      xhtml = false
+  [markup.highlight]
+    anchorLineNos = true
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineAnchors = ""
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = true
+    style = "monokai"
+    tabWidth = 4
+  [markup.tableOfContents]
+    endLevel = 6
+    ordered = false
+    startLevel = 1

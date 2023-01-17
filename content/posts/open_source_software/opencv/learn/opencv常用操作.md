@@ -8,7 +8,7 @@ tags: [opencv]
 categories: [开源软件]
 ---
 
-## unsigned char* 转换为 Mat类型
+# unsigned char* 转换为 Mat类型
 
 ```c++
 cv::Mat mmat = cv::Mat(stFrameInfo.nHeight, stFrameInfo.nWidth, CV_8UC1, stImageInfo.pBufAddr, 0);
@@ -16,7 +16,7 @@ cv::Mat mmat = cv::Mat(stFrameInfo.nHeight, stFrameInfo.nWidth, CV_8UC1, stImage
 
 
 
-## BYTE* 转换为 Mat类型
+# BYTE* 转换为 Mat类型
 
 ```c++
 cv::Mat sMat = Mat(sFrameHead.iHeight, sFrameHead.iWidth, CV_8UC1);;
@@ -26,7 +26,7 @@ cv::Mat sMat = Mat(sFrameHead.iHeight, sFrameHead.iWidth, CV_8UC1);;
 
 
 
-## Mat转unsigned char*
+# Mat转unsigned char*
 
 ```c++
 unsigned char pdata= srcMat.data; // Mat => unsigned char
@@ -59,7 +59,7 @@ void BoxVisualization(cv::Mat frame, int tl_x, int tl_y, int br_x, int br_y, int
 
 
 
-## 画圆
+# 画圆
 
 ```c++
 void Visualization(cv::Mat frame, int tl_x, int tl_y, int br_x, int br_y)
@@ -73,5 +73,5 @@ void Visualization(cv::Mat frame, int tl_x, int tl_y, int br_x, int br_y)
 
 
 
-## 常用颜色定义
+# 常用颜色定义
 
